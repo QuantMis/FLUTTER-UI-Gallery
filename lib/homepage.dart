@@ -8,6 +8,7 @@ import 'appbar/imageAppBar.dart';
 import 'appbar/tabAppBar.dart';
 import 'appbar/transparentAppBar.dart';
 import 'splashscreen/basicSplash.dart';
+import 'listview/modernList.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -140,6 +141,41 @@ class HomePage extends StatelessWidget {
                         ),
                         onTap: () {
                           Get.to(BasicSplash());
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("ListView Collection"),
+                ),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 20.0),
+                  height: 200.0,
+                  child: ListView(
+                    // This next line does the trick.
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      InkWell(
+                        child: Card(
+                          child: Column(children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Basic",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600)),
+                            ),
+                          ]),
+                        ),
+                        onTap: () {
+                          Get.to(ListViewPage());
                         },
                       ),
                     ],
