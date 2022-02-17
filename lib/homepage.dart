@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 5, 94, 228),
         title: Center(
           child: Text(
-            "Flutter Collection",
+            "Flutter Collection Design",
             style: TextStyle(
                 fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600),
           ),
